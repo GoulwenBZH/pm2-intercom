@@ -1,20 +1,34 @@
 {
   "name": "pm2-intercom",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic system to broadcast message to all other processes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "DEBUG='*' mocha test/*.mocha.js"
   },
   "dependencies" : {
-    "pm2"    : "latest",
+    "pm2"    : "Unitech/pm2#development",
     "pmx"    : "latest",
     "async"  : "latest",
     "semver" : "*"
   },
+  "devDependencies": {
+    "mocha"           : "2.x",
+    "should"          : "^7.0.0",
+    "better-assert"   : "^1.0.0"
+  },
+  "keywords": [
+    "pubsub",
+    "intercomunication",
+    "microservice",
+    "service",
+    "zeromq",
+    "axon",
+    "pm2"
+  ],
   "config" : {
     "default-strategy" : "broadcast"
   },
-  "author": "",
+  "author": "Alexandre Strzelewicz",
   "license": "ISC"
 }
